@@ -1,0 +1,213 @@
+*
+    margin 0
+    padding 0
+
+html
+body
+    width 100%
+    height 100%
+    background-color #f0f2f5
+
+.content
+    z-index 1
+    width 50%
+    min-height 100%
+    margin 0 auto
+
+ul
+li
+    list-style none
+
+input[type='text'].search
+    width 50%
+    height 25px
+    font-size 15px
+    left 50%
+    transform translate(50%, 0)
+    background-color #f0f2f5
+    border 0
+    border-radius 25px
+    margin-top 10px
+    text-align center
+    transition-timing-function linear
+    transition-duration 0.2s
+    &:focus
+        background-color #fff
+        box-shadow 0 1px 2px rgba(6,33,63,0.13)
+    &:hover
+        box-shadow 0 1px 2px rgba(6,33,63,0.13)
+        
+/*input[type='text'].search:focus
+    background-color #fff*/
+
+input[type='button']
+    position absolute
+    height 30px
+    border 0
+    background-color #fff
+    opacity 0.5
+    width (100% / 5)
+    text-align center
+    cursor pointer
+    color #567ca4
+    &:hover
+        opacity 1
+        cursor pointer
+        background-color #eef3fa
+        color #2b2f33
+        border-radius 2px
+    &.end_show_top
+        top 5px
+        left 5px
+    &.end_show_bot
+        bottom 5px
+        left 5px
+    &.add_note__button
+        top 10px
+        right 25%
+        width 80px
+        height 25px
+        background-color #f0f2f5
+        color #A4A19E
+        transition-timing-function linear
+        transition-duration 0.1s
+        &:hover
+            background-color #fff
+            color #2b2f33
+    &.add_note__add-button
+    &.note_edit__ok-button
+        left 30%
+        bottom 10px
+    &.add_note__cancel-button
+    &.note_edit__cancel-button
+        right 30%
+        bottom 10px
+
+.add_note
+    display none
+    position relative
+    width 100%
+    height 300px
+    margin-top 10px
+    background-color #fff
+    border-radius 2px
+    box-shadow 0 1px 2px rgba(6, 33, 63, 0.13)
+    &__title
+        position relative
+        width 80%
+        left 50%
+        transform translate(-50%, 10px)
+    &__text
+        position relative
+        width 80%
+        height 200px
+        left 50%
+        transform translate(-50%, 20px)
+        resize none
+    &__edit
+        display block
+
+.note_edit
+    position relative
+    z-index 11
+    opacity 1
+    width 50%
+    left 50%
+    transform translate(-50%)
+    margin 10px 0
+    height 300px
+    background-color #fff
+    border-radius 2px
+    box-shadow 0 1px 2px rgba(6, 33, 63, 0.13)
+    &__title
+        position relative
+        width 80%
+        left 50%
+        transform translate(-50%, 10px)
+    &__text
+        position relative
+        width 80%
+        height 200px
+        left 50%
+        transform translate(-50%, 20px)
+        resize none
+
+
+.note
+    position relative
+    width 100%
+    height 120px
+    margin 10px 0
+    overflow hidden
+    background-color #fff
+    border-radius 2px
+    box-shadow 0 1px 2px rgba(6, 33, 63, 0.13)
+    transition-timing-function linear
+    transition-duration 0.5s
+    &:hover
+        height 170px
+    &_show
+        position relative
+        z-index 11
+        opacity 1
+        width 50%
+        left 50%
+        transform translate(-50%)
+        margin 10px 0
+        min-height 120px
+        background-color #fff
+        border-radius 2px
+        box-shadow 0 1px 2px rgba(6, 33, 63, 0.13)
+    &__title
+        height 40px
+        width 100%
+        color #2b2f33
+        line-height 40px
+        text-align center
+    &__text
+        height 80px
+        padding 5px
+        color #2b2f33
+        &_show
+            min-height 100px
+            padding 5px
+            padding-bottom 45px
+            color #2b2f33
+    &__tools
+        position absolute
+        height 40px
+        width 50%
+        left 50%
+        transform translate(-50%, -10px)
+        line-height 40px
+        list-style none
+        li
+            height 40px
+            opacity 0.5
+            float left
+            width (100% / 3)
+            text-align center
+            cursor pointer
+            color #567ca4
+        li:hover
+            opacity 1
+            cursor pointer
+            background-color #eef3fa
+            color #2b2f33
+            border-radius 2px
+
+.popup
+    display none
+    position fixed
+    z-index 10
+    width 100%
+    height 100%
+    background-image url('../img/bg.png')
+    opacity 1
+    overflow hidden
+    &__content
+        display none
+        z-index 11
+        width 100%
+        height 100%
+        overflow auto

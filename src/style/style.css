@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f0f2f5;
+}
+.content {
+  z-index: 1;
+  width: 50%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+ul,
+li {
+  list-style: none;
+}
+input[type='text'].search {
+  width: 50%;
+  height: 25px;
+  font-size: 15px;
+  left: 50%;
+  transform: translate(50%, 0);
+  background-color: #f0f2f5;
+  border: 0;
+  border-radius: 25px;
+  margin-top: 10px;
+  text-align: center;
+  transition-timing-function: linear;
+  transition-duration: 0.2s;
+}
+input[type='text'].search:focus {
+  background-color: #fff;
+  box-shadow: 0 1px 2px rgba(6,33,63,0.13);
+}
+input[type='text'].search:hover {
+  box-shadow: 0 1px 2px rgba(6,33,63,0.13);
+}
+/*input[type='text'].search:focus
+    background-color #fff*/
+input[type='button'] {
+  position: absolute;
+  height: 30px;
+  border: 0;
+  background-color: #fff;
+  opacity: 0.5;
+  width: 20%;
+  text-align: center;
+  cursor: pointer;
+  color: #567ca4;
+}
+input[type='button']:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: #eef3fa;
+  color: #2b2f33;
+  border-radius: 2px;
+}
+input[type='button'].end_show_top {
+  top: 5px;
+  left: 5px;
+}
+input[type='button'].end_show_bot {
+  bottom: 5px;
+  left: 5px;
+}
+input[type='button'].add_note__button {
+  top: 10px;
+  right: 25%;
+  width: 80px;
+  height: 25px;
+  background-color: #f0f2f5;
+  color: #a4a19e;
+  transition-timing-function: linear;
+  transition-duration: 0.1s;
+}
+input[type='button'].add_note__button:hover {
+  background-color: #fff;
+  color: #2b2f33;
+}
+input[type='button'].add_note__add-button,
+input[type='button'].note_edit__ok-button {
+  left: 30%;
+  bottom: 10px;
+}
+input[type='button'].add_note__cancel-button,
+input[type='button'].note_edit__cancel-button {
+  right: 30%;
+  bottom: 10px;
+}
+.add_note {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(6,33,63,0.13);
+}
+.add_note__title {
+  position: relative;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%, 10px);
+}
+.add_note__text {
+  position: relative;
+  width: 80%;
+  height: 200px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  resize: none;
+}
+.add_note__edit {
+  display: block;
+}
+.note_edit {
+  position: relative;
+  z-index: 11;
+  opacity: 1;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 10px 0;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(6,33,63,0.13);
+}
+.note_edit__title {
+  position: relative;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%, 10px);
+}
+.note_edit__text {
+  position: relative;
+  width: 80%;
+  height: 200px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  resize: none;
+}
+.note {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  margin: 10px 0;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(6,33,63,0.13);
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+}
+.note:hover {
+  height: 170px;
+}
+.note_show {
+  position: relative;
+  z-index: 11;
+  opacity: 1;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  margin: 10px 0;
+  min-height: 120px;
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(6,33,63,0.13);
+}
+.note__title {
+  height: 40px;
+  width: 100%;
+  color: #2b2f33;
+  line-height: 40px;
+  text-align: center;
+}
+.note__text {
+  height: 80px;
+  padding: 5px;
+  color: #2b2f33;
+}
+.note__text_show {
+  min-height: 100px;
+  padding: 5px;
+  padding-bottom: 45px;
+  color: #2b2f33;
+}
+.note__tools {
+  position: absolute;
+  height: 40px;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  line-height: 40px;
+  list-style: none;
+}
+.note__tools li {
+  height: 40px;
+  opacity: 0.5;
+  float: left;
+  width: 33.333333333333336%;
+  text-align: center;
+  cursor: pointer;
+  color: #567ca4;
+}
+.note__tools li:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: #eef3fa;
+  color: #2b2f33;
+  border-radius: 2px;
+}
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg.png");
+  opacity: 1;
+  overflow: hidden;
+}
+.popup__content {
+  display: none;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
