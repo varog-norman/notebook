@@ -128,7 +128,12 @@ var App = React.createClass({
         ReactDOM.render(<Edit callback={this.callback} elem={this.state.currentList[arguments[0]]} index={i} />, document.querySelector('.popup__content'));
     },
     addNote: function() {
-        document.querySelector('.add_note').style.display = 'block';
+        var addNote = document.querySelector('.add_note');
+        if(addNote.style.display == 'block') {
+            addNote.style.display = 'none';
+        } else {
+            addNote.style.display = 'block'
+        }
     },
     addNoteTrue: function() {
         if(document.querySelector('.add_note__title').value == '' || document.querySelector('.add_note__text').value == '') {

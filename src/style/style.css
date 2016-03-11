@@ -7,6 +7,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: #f0f2f5;
+  font-family: sans;
 }
 .content {
   z-index: 1;
@@ -72,6 +73,7 @@ input[type='button'].add_note__button {
   right: 25%;
   width: 80px;
   height: 25px;
+  background: none;
   background-color: #f0f2f5;
   color: #a4a19e;
   transition-timing-function: linear;
